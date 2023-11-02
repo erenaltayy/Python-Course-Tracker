@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+a {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    margin: 5px;
+    background-color: #ccc; 
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    color: #000; 
+    border: 1px solid #000; 
+}
+

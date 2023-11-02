@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Python Course Tracker! Let's Learn Python</h1>
+    <hr>
+    <div class="container">
+        {% for a_tag in a_tags %}
+        <a href="{{ a_tag['url'] }}" class="a_tag">{{ a_tag['title'] }}</a>
+        <br>
+        {% endfor %}
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
