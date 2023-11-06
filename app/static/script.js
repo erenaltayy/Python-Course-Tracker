@@ -1,4 +1,5 @@
 const a_tags = Array.from(document.getElementsByClassName("a_tag"));
+const infos = Array.from(document.getElementsByClassName("info"));
 let clickeds = [];
 
 let a_id = 1;
@@ -6,6 +7,12 @@ a_tags.forEach((a) => {
     a.setAttribute("id", a_id);
     a_id++;
 });
+
+let info_id = 1;
+infos.forEach((i) => {
+    i.setAttribute("id", "i_"+ info_id);
+    info_id++;
+})
 
 
 document.querySelectorAll("a").forEach((a) => {
@@ -15,10 +22,6 @@ document.querySelectorAll("a").forEach((a) => {
     });
 });
 
-//  let dizi = Object.keys(localStorage);
-//  console.log(dizi);
-
-
 window.addEventListener("load", () => {
     let clicked_keys = Object.keys(localStorage);
     clicked_keys.forEach( (key) => {
@@ -26,18 +29,30 @@ window.addEventListener("load", () => {
         clickeds.push(key);
     });
    
-
     clickeds.forEach( (c) => {
         const id = c.match(/\d+/g);
         let clicked_a_tag = document.getElementById(id);
         if(clicked_a_tag){
-            clicked_a_tag.style.backgroundColor = "green";
-            clicked_a_tag.style.color = "white";
+            let parentdiv = clicked_a_tag.parentElement;
+            parentdiv.style.backgroundColor = "green";
+            parentdiv.style.color = "white";
         }
         else{
             console.log("aranan eleman bulunamadı");
         }
        
-    })
+    });
     
 });
+
+
+window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+        location.reload();
+    }
+});
+
+
+//elle de yeşil işaretleme ekle
+// yeşil işareti kaldırma ekle
+//hepsii bitirince tebrik mesajı ekle
