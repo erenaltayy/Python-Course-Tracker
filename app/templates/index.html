@@ -11,7 +11,10 @@
     <hr>
     <div class="container">
         {% for a_tag in a_tags %}
-        <a href="{{ a_tag['url'] }}" class="a_tag">{{ a_tag['title'] }}</a>
+        <div class="topic">
+           <a href="{{ a_tag['url'] }}" class="a_tag">{{ a_tag['title'] }}</a> 
+           <br>
+        </div>
         <br>
         {% endfor %}
     </div>
