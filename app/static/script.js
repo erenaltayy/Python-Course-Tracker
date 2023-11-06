@@ -1,5 +1,4 @@
 const a_tags = Array.from(document.getElementsByClassName("a_tag"));
-const infos = Array.from(document.getElementsByClassName("info"));
 let clickeds = [];
 
 let a_id = 1;
@@ -47,3 +46,10 @@ window.addEventListener("pageshow", (event) => {
         location.reload();
     }
 });
+
+
+
+
+//elle de yeşil işaretleme ekle
+// yeşil işareti kaldırma ekle
+//hepsii bitirince tebrik mesajı ekle
