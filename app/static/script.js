@@ -8,13 +8,6 @@ a_tags.forEach((a) => {
     a_id++;
 });
 
-let info_id = 1;
-infos.forEach((i) => {
-    i.setAttribute("id", "i_"+ info_id);
-    info_id++;
-})
-
-
 document.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", (event) => {
         localStorage.setItem("id_"+ event.target.id, event.target.id);
@@ -24,6 +17,9 @@ document.querySelectorAll("a").forEach((a) => {
 
 window.addEventListener("load", () => {
     let clicked_keys = Object.keys(localStorage);
+    if(clicked_keys.length == 200){
+        window.alert("Congrats, you've done it!!!");
+    }
     clicked_keys.forEach( (key) => {
         console.log("eklenen key: " + key)
         clickeds.push(key);
@@ -51,8 +47,3 @@ window.addEventListener("pageshow", (event) => {
         location.reload();
     }
 });
-
-
-//elle de yeşil işaretleme ekle
-// yeşil işareti kaldırma ekle
-//hepsii bitirince tebrik mesajı ekle
