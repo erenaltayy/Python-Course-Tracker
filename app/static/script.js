@@ -47,9 +47,3 @@ window.addEventListener("pageshow", (event) => {
     }
 });
 
-
-
-
-//elle de yeşil işaretleme ekle
-// yeşil işareti kaldırma ekle
-//hepsii bitirince tebrik mesajı ekle
