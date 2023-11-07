@@ -6,7 +6,7 @@
 .topic{
     display: inline-block;
     width: 150px;
-    height: 100px;
+    height: 130px;
     margin: 5px;
     background-color: #ccc; 
     text-align: center;
@@ -22,6 +22,15 @@ a{
     color: #000;
     line-height: 30px;
 }
+.compBtn, .incompBtn {
+    display: none;
+}
+  .topic:hover .compBtn,
+  .topic:hover .incompBtn {
+    display: inline-block;
+}
+  
+
 
 
 
