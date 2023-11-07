@@ -1,11 +1,29 @@
 const a_tags = Array.from(document.getElementsByClassName("a_tag"));
+const compBtns = Array.from(document.getElementsByClassName("compBtn"));
+const incompBtns = Array.from(document.getElementsByClassName("incompBtn"));
 let clickeds = [];
 
-let a_id = 1;
-a_tags.forEach((a) => {
-    a.setAttribute("id", a_id);
-    a_id++;
+a_tags.forEach((a, index) => {
+    a.setAttribute("id", index);
 });
+
+compBtns.forEach((c, index) => {
+    c.setAttribute("id", "c_" + index);
+    c.addEventListener("click", () => {
+        localStorage.setItem("id_" + index, index);
+        location.reload();
+    });
+});
+
+incompBtns.forEach((i, index) => {
+    i.setAttribute("id", "i_" + index);
+    i.addEventListener("click", () => {
+        localStorage.removeItem("id_" + index);
+        console.log("kaldırıldı: " + "id_" + index);
+        location.reload();
+    });
+});
+
 
 document.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", (event) => {
@@ -30,7 +48,7 @@ window.addEventListener("load", () => {
         if(clicked_a_tag){
             let parentdiv = clicked_a_tag.parentElement;
             parentdiv.style.backgroundColor = "green";
-            parentdiv.style.color = "white";
+            clicked_a_tag.style.color = "white";
         }
         else{
             console.log("aranan eleman bulunamadı");
@@ -46,4 +64,3 @@ window.addEventListener("pageshow", (event) => {
         location.reload();
     }
 });
-
