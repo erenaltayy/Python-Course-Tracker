@@ -19,7 +19,6 @@ incompBtns.forEach((i, index) => {
     i.setAttribute("id", "i_" + index);
     i.addEventListener("click", () => {
         localStorage.removeItem("id_" + index);
-        console.log("kaldırıldı: " + "id_" + index);
         location.reload();
     });
 });
@@ -28,7 +27,6 @@ incompBtns.forEach((i, index) => {
 document.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", (event) => {
         localStorage.setItem("id_"+ event.target.id, event.target.id);
-        console.log("local storage eklendi: " + event.target.id);
     });
 });
 
@@ -51,7 +49,7 @@ window.addEventListener("load", () => {
             clicked_a_tag.style.color = "white";
         }
         else{
-            console.log("aranan eleman bulunamadı");
+            console.log("the element not found");
         }
        
     });
