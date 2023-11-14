@@ -20,9 +20,9 @@ This web application allows users to browse and track their progress in various 
 
 To run the application, execute the following command:
 
-```bash
+```
 python run.py
-
+```
 
 Open your web browser and navigate to http://localhost:5000
 
