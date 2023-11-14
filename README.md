@@ -28,10 +28,10 @@ Open your web browser and navigate to http://localhost:5000
 
 ## Usage
 
--Visit the homepage to see the list of Python tutorials.
--Click on tutorial titles to view the content on the original tutorialspoint website.
--Use the "Mark as Completed" and "Mark as Incomplete" buttons to track your progress.
--Your progress will be saved even if you close or refresh the page
+- Visit the homepage to see the list of Python tutorials.
+- Click on tutorial titles to view the content on the original tutorialspoint website.
+- Use the "Mark as Completed" and "Mark as Incomplete" buttons to track your progress.
+- Your progress will be saved even if you close or refresh the page
 
 ## Customization
 
@@ -47,8 +47,8 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-Flask - Web framework used for the backend.
-Beautiful Soup - Library for web scraping.
-Tutorialspoint - Source of Python tutorials.
+* Flask - Web framework used for the backend.
+* Beautiful Soup - Library for web scraping.
+* Tutorialspoint - Source of Python tutorials.
 
 **Happy learning!**
