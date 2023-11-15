@@ -43,7 +43,7 @@ Contributions are welcome! If you have any improvements or bug fixes, please sub
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under GNU General Public License v3.0.
 
 ## Acknowledgments
 
